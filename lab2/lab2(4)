@@ -1,0 +1,28 @@
+package com.max.idea;
+import java.util.Scanner;
+public class main4 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a;
+        double y,x,dx,b;
+        System.out.println("Результат обчислення функції: ");
+        a=0;
+        b=Math.PI;
+        dx=Math.PI/20;
+        for (x=a;x<=b-dx;x+=dx )
+        {
+            String result = String.format("%.3f",x);
+            System.out.print("x= " +result+" | ");
+            if (x<0.5){
+                y=Math.pow(Math.tan(x)+13,1.0/4);
+                String result1 = String.format("%.3f",y);
+                System.out.println("y ="+result1);
+            }
+            else if (x>=0){
+                y =Math.exp(x);
+                String result1 = String.format("%.3f",y);
+                System.out.println("y ="+result1);
+            }
+        }
+    }
+}
