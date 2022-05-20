@@ -1,0 +1,54 @@
+package com.max.idea;
+import java.util.Scanner;
+public class main3 {
+    //Написати програму, яка в залежності від порядкового номера місяця (1,2,...12) виводить на
+    //екран його назву (січень,...грудень)
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введіть порядковий номер місяця: ");
+        int number = in.nextInt();
+        String month;
+        switch (number) {
+            case 1:
+                month = "Січень";
+                break;
+            case 2:
+                month = "Лютий";
+                break;
+            case 3:
+                month = "Березнь";
+                break;
+            case 4:
+                month = "Квітень";
+                break;
+            case 5:
+                month = "Травень";
+                break;
+            case 6:
+                month = "Червень";
+                break;
+            case 7:
+                month = "Липень";
+                break;
+            case 8:
+                month = "Серпень";
+                break;
+            case 9:
+                month = "Вересень";
+                break;
+            case 10:
+                month = "Жовтень";
+                break;
+            case 11:
+                month = "Листопад";
+                break;
+            case 12:
+                month = "Грудень";
+                break;
+            default:
+                month = "У році лише 12 місяців";
+                break;
+        }
+        System.out.println("Місяць: "+month);
+    }
+}
