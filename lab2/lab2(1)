@@ -1,0 +1,25 @@
+package com.max.idea;
+import java.util.Scanner;
+public class main1 {
+    public static void main(String[] args) {
+        do {
+            Scanner in = new Scanner(System.in);
+            try {
+                System.out.print("Введіть х: ");
+                int x = in.nextInt();
+                System.out.print("Введіть y: ");
+                int y = in.nextInt();
+                if(1+x*x+y*y==0){
+                    throw new Exception("Вираз: 1+x*x+y*y   Повинен бути більше або менше 0");
+                }
+                double func = (Math.pow(x, 2) + x * y + Math.pow(y, 2)) / (1 + Math.pow(x, 2) + Math.pow(y, 2));
+                String result1 = String.format("%.2f", func);
+                System.out.print("Функція дорівнює: " + result1);
+                break;
+            }
+            catch(Exception c){
+                System.out.println(c.getMessage());
+            }
+        }while(true);
+    }
+}
