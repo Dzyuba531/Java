@@ -1,0 +1,33 @@
+package com.max.idea;
+import java.util.Scanner;
+
+public class main4 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int x, y, z;
+        double sum, sum1, a;
+        try {
+            System.out.println("Введіть перше число: ");
+            x = in.nextInt();
+            System.out.println("Введіть друге число: ");
+            y = in.nextInt();
+            System.out.println("Введіть третє число: ");
+            z = in.nextInt();
+            sum = x + y + z;
+            sum1 = Math.pow(x,2) * y - z;
+            if(sum == 0){
+                throw new Exception("Сумма чисел повина бути більша 0");
+            }
+            if(sum1<=0){
+                throw new Exception("Вираз: (x * x) * y - z  Повинен бути більше 0.");
+            }
+            a = Math.sqrt(sum1) + (Math.log10(sum) / Math.log10(2));
+            System.out.print("Результат прикладу: ");
+            System.out.format("%.2f",a);
+        }
+
+        catch(Exception c){
+            System.out.println(c.getMessage());
+        }
+    }
+}
