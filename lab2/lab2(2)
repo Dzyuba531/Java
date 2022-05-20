@@ -1,0 +1,50 @@
+package com.max.idea;
+import java.util.Scanner;
+public class main2 {
+    public static void main(String[] args){
+        do {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Виберіть яким циклом буде виконано завдання(1, 2 або 3):");
+            int k = in.nextInt();
+            int x = 100;
+            int sum = 0;
+            switch (k) {
+                case 1:
+                    for (int i = 0; i <= x; i++) {
+                        if (i % 5 == 0) {
+                            sum += i;
+                        }
+                    }
+                    System.out.println("Сума всіх чисел, кратних 5, у діапазоні (1;100]: "+sum);
+                    break;
+                case 2:
+                    int c = 0;
+                    while (c < x) {
+                        c++;
+                        if (c % 5 == 0) {
+                            sum += c;
+                        }
+                    }
+                    System.out.println("Сума всіх чисел, кратних 5, у діапазоні (1;100]: "+sum);
+                    break;
+                case 3:
+                    int b = 0;
+                    do {
+                        b++;
+                        if (b % 5 == 0) {
+                            sum += b;
+                        }
+                    }
+                    while (b < x);
+                    System.out.println("Сума всіх чисел, кратних 5, у діапазоні (1;100]: "+sum);
+                    break;
+                case 999:
+                    System.out.println("Ви завершиил роботу програми.");
+                    return;
+                default:
+                    System.out.println("Ви ввели неправильне число.");
+                    break;
+            }
+        }while(true);
+    }
+}
