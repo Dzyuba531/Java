@@ -1,0 +1,32 @@
+package com.max.idea;
+import java.util.Scanner;
+public class main2 {
+    //Дано три дійсних числа А, В та С. Якщо ці значення введені за зростанням, то подвоїти кожне з
+    //них, в протилежному випадку замінити значення кожного з чисел на обернені.
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введіть a: ");
+        int a = in.nextInt();
+        System.out.println("Введіть b: ");
+        int b = in.nextInt();
+        System.out.println("Введіть c: ");
+        int c = in.nextInt();
+
+        if(b>a & c>b){
+            a *= 2;
+            b *= 2;
+            c *= 2;
+            System.out.println("a: "+a);
+            System.out.println("b: "+b);
+            System.out.println("c: "+c);
+        }
+        else{
+            a*=-1;
+            b*=-1;
+            c*=-1;
+            System.out.println("a: "+a);
+            System.out.println("b: "+b);
+            System.out.println("c: "+c);
+        }
+    }
+}
