@@ -17,7 +17,7 @@ public class task2 {
     public static int Sum_After_Max(int[] arr)throws Exception{
         int max=0;
         int x=0;
-        int sum=0;
+        int sum=1;
 
         for (int i = 0; i < arr.length; i++) {
             int a=arr[arr.length-1];
@@ -31,7 +31,7 @@ public class task2 {
             }
         }
         for (int i = x+1; i < arr.length; i++) {
-            sum += arr[i];
+            sum *= arr[i];
 
         }
 
